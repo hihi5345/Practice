@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:text="총 수강 학점 : "/>
             <TextView
-                android:id="@+id/total_grade1"
+                android:id="@+id/total_credit"
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="취득 성적 총합 : "/>
             <TextView
-                android:id="@+id/total_grade2"
+                android:id="@+id/total_grade"
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,13 +56,13 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/grade1"
+                android:id="@+id/credit"
                 android:numeric="integer"
                 android:hint="학점"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/grade2"
+                android:id="@+id/grade"
                 android:numeric="decimal"
                 android:hint="성적"/>
         </LinearLayout>

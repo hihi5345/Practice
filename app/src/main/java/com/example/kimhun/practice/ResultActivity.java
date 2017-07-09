@@ -10,23 +10,23 @@ import android.widget.TextView;
  */
 
 public class ResultActivity extends AppCompatActivity {
-    double result_grade;
-    double grade1;
-    double grade2;
+    double resultGrade;
+    double credit;
+    double grade;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         Intent intent = getIntent();
-        result_grade = intent.getDoubleExtra("result",result_grade);
-        grade1 = intent.getDoubleExtra("total_grade1",grade1);
-        grade2 = intent.getDoubleExtra("total_grade2",grade2);
+        resultGrade = intent.getDoubleExtra("result", resultGrade);
+        credit = intent.getDoubleExtra("totalCredit", credit);
+        grade = intent.getDoubleExtra("totalGrade", grade);
         TextView result = (TextView) findViewById(R.id.result);
-        TextView total_grade1 = (TextView) findViewById(R.id.total_grade1);
-        TextView total_grade2 = (TextView) findViewById(R.id.total_grade2);
-        result.setText(Double.toString(result_grade));
-        total_grade1.setText(Double.toString(grade1));
-        total_grade2.setText(Double.toString(grade2));
+        TextView totalCredit = (TextView) findViewById(R.id.total_credit);
+        TextView totalGrade = (TextView) findViewById(R.id.total_grade);
+        result.setText(Double.toString(resultGrade));
+        totalCredit.setText(Double.toString(credit));
+        totalGrade.setText(Double.toString(grade));
 
     }
 }
