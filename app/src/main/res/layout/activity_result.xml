@@ -4,55 +4,28 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="총 수강 학점 : "/>
-        <TextView
-            android:id="@+id/total_credit"
+            android:text="학점 결과"
             android:gravity="center"
+            android:onClick="selectFrag"/>
+        <Button
+            android:id="@+id/btn_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
+            android:text="학점 현황"
             android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="취득 성적 총합 : "/>
-        <TextView
-            android:id="@+id/total_grade"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="평균 학점 : "/>
-        <TextView
-            android:id="@+id/result"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
+            android:onClick="selectFrag"/>
     </LinearLayout>
 </LinearLayout>
