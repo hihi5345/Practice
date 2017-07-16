@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 public class FirstFragment extends Fragment {
 
-    TextView result;
-    TextView totalCredit;
-    TextView totalGrade;
+    private TextView result;
+    private TextView totalCredit;
+    private TextView totalGrade;
 
-    double resultGrade;
-    double credit;
-    double grade;
+    private double resultGrade;
+    private double credit;
+    private double grade;
 
     public FirstFragment(double resultGrade, double credit, double grade) {
 
