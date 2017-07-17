@@ -14,8 +14,8 @@ import android.widget.ListView;
  */
 
 public class SecondFragment extends Fragment {
-    ListView listView;
-    ArrayAdapter<String> mAdapter;
+    private ListView listView;
+    private ArrayAdapter<String> mAdapter;
     public SecondFragment(){
 
     }

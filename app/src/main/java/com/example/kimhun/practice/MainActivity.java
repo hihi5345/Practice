@@ -10,19 +10,32 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    double totalCredit = 0.0;
-    double totalGrade = 0.0;
+    private double totalCredit = 0.0;
+    private double totalGrade = 0.0;
 
-    EditText credit;
-    EditText grade;
+    private EditText credit;
+    private EditText grade;
 
-    TextView totalCreditText;
-    TextView totalGradeText;
+    private TextView totalCreditText;
+    private TextView totalGradeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initData();
+
+        totalCreditText = (TextView) findViewById(R.id.total_credit);
+        totalCreditText.setText(Double.toString(totalCredit));
+
+        totalGradeText = (TextView) findViewById(R.id.total_grade);
+        totalGradeText.setText(Double.toString(totalGrade));
+
+    }
+
+
+    public void initData(){
 
         Resources res = getResources();
         String[] gradeArray = res.getStringArray(R.array.grade);
@@ -34,14 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 totalGrade += Double.parseDouble(gradeArray[i-1]) * Double.parseDouble(gradeArray[i]);
             }
         }
-
-        totalCreditText = (TextView) findViewById(R.id.total_credit);
-        totalCreditText.setText(Double.toString(totalCredit));
-
-        totalGradeText = (TextView) findViewById(R.id.total_grade);
-        totalGradeText.setText(Double.toString(totalGrade));
-
     }
+
     public void plus(View view){
         credit = (EditText) findViewById(R.id.credit);
         grade = (EditText) findViewById(R.id.grade);
@@ -58,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         totalGradeText = (TextView) findViewById(R.id.total_grade);
         totalGradeText.setText(Double.toString(totalGrade));
     }
+
     public void result(View view){
         double result = totalGrade / totalCredit;
         Intent intent = new Intent(this, ResultActivity.class);
